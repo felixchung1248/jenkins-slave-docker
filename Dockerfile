@@ -7,4 +7,5 @@ RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s
 RUN chmod +x ./kubectl
 RUN mv ./kubectl /usr/local/bin
 RUN apt install -y python3.11 \
+	&& apt install -y python3-pip \	
 	&& pip install -r requirements.txt
